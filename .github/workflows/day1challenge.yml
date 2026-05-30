@@ -1,0 +1,20 @@
+name: Day 1 challenge
+on:
+  push:
+
+jobs:
+  system-info:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: check user
+        run: whoami
+
+      - name: check system date 
+        run: date
+
+      - name: check distribution info 
+        run: cat /etc/os-release
+
+      - name: check path
+        run: pwd
