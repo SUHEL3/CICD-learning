@@ -1,5 +1,8 @@
 name: My Workflow
-on: push
+on:
+   push:
+    branches:
+      - main
 
 jobs:
   first-job:
@@ -7,3 +10,12 @@ jobs:
     steps:
       - name: print greeting
         run: echo "Hello World"
+  second-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: copy repo in runner using checkout
+        uses: actions/checkout@v4
+      - name: check path of copied repo
+        run: pwd
+      - name: list all items from repo
+        run: ls -al
