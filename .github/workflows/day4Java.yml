@@ -1,0 +1,19 @@
+name: Java workflow
+on:
+  push:
+    branches:
+      - java
+
+jobs:
+  run-java-command:
+    runs-on: ubuntu-latest
+    steps:
+      - name: install java on runner machine
+        uses: actions/setup-java@v5
+        with: 
+          distribution: temurin
+          java-version: 21
+ 
+      - name: verify installation
+        run: java --version 
+
