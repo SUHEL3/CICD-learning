@@ -21,6 +21,6 @@ jobs:
       - name: accessing step level env
         env:
           stepEnv: third level
-       run: echo $stepEnv
+        run: echo $stepEnv
 
 
