@@ -1,0 +1,26 @@
+name: deep understanding of day 4
+on:
+  push:
+    branches:
+      - new-feature
+env:
+  workflowEnv: first level
+  level1_value: 1.0
+
+jobs:
+  test:
+    env: 
+      jobEnv: second level
+      level1_value: 2.0
+    runs-on: ubuntu-latest
+    steps:
+      - name: accessing workflow level env
+        run: echo $workflowEnv $level1_value
+      - name: accessing job level env
+        run: echo $jobEnv
+      - name: accessing step level env
+        env:
+          stepEnv: third level
+       run: echo $stepEnv
+
+
