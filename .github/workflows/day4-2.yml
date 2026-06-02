@@ -1,8 +1,6 @@
-name: deep understanding of day 4
+name: deep understanding of day 4 
 on:
-  push:
-    branches:
-      - new-feature
+  workflow_dispatch:
 env:
   workflowEnv: first level
   level1_value: 1.0
@@ -11,7 +9,7 @@ jobs:
   test:
     env: 
       jobEnv: second level
-      level1_value: 2.0
+      level2_value: 2.0
     runs-on: ubuntu-latest
     steps:
       - name: accessing workflow level env
@@ -22,5 +20,6 @@ jobs:
         env:
           stepEnv: third level
         run: echo $stepEnv
-
+      - name: accessing secret which is stored in github secrets
+        run: echo "${[secrets.MY_SECRET_PASSWORD}}"
 
