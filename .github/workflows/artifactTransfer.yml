@@ -4,7 +4,7 @@ on:
 
 jobs:
   producer:
-    on: ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
       - name: creating file
         run: echo "hello artifact" > message.txt
@@ -15,7 +15,7 @@ jobs:
           path: message.txt
 
   consumer:
-    on: ubuntu-latest
+    runs-on: ubuntu-latest
     needs: producer
     steps: 
       - name: download artifact
