@@ -4,13 +4,13 @@ on:
 
 jobs:
   upload-artifact:
-    on: ubuntu-latest
+    runs-on: ubuntu-latest
     env: 
-      project-name: demonstration of artifact
+      projectName: demonstration of artifact
       version: 1
     steps:
       - name: project information
-        run: echo $project-name version : $version
+        run: echo $projectName version : $version
       - name: create file
         run: echo "Hello Artifact" >> message.txt
       - name: upload artifact
