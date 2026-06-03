@@ -11,7 +11,7 @@ jobs:
       - name: uploding artifact
         uses: actions/upload-artifact@v4
         with:
-          name: artifact.txt
+          name: artifact
           path: message.txt
 
   consumer:
@@ -21,6 +21,6 @@ jobs:
       - name: download artifact
         uses: actions/download-artifact@v4
         with: 
-          name: artifact.txt
+          name: artifact
       - name: show content of downloaded artifact.txt
-        run: cat artifact.txt
+        run: cat message.txt
