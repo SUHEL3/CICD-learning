@@ -1,0 +1,2 @@
+day4 part 2 contains practice of env,secrets,cache,artifacts,caching,job dependencies(need) and learnt theory about git hosted vs self hosted runner
+
