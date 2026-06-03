@@ -10,7 +10,7 @@ jobs:
       version: 1
     steps:
       - name: project information
-        run: echo "$projectName version : $version"
+        run: echo "${projectName}"
       - name: create file
         run: echo "Hello Artifact" >> message.txt
       - name: upload artifact
