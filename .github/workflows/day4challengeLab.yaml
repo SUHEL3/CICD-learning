@@ -10,7 +10,7 @@ jobs:
       - run: echo "suhel mujawar" > student.txt
       - uses: actions/upload-artifact@v4
         with:
-          naem: Student_Info
+          name: Student_Info
           path: student.txt
 
   download:
