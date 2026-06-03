@@ -16,5 +16,5 @@ jobs:
       - name: upload artifact
         uses: actions/upload-artifact@v4
         with: 
-         name: my-file
-         path: message.txt
+          name: my-file
+          path: message.txt
