@@ -21,4 +21,4 @@ jobs:
           stepEnv: third level
         run: echo $stepEnv
       - name: accessing secret which is stored in github secrets
-        run: echo "${[secrets.MY_SECRET_PASSWORD}}"
+        run: echo "${{secrets.MY_SECRET_PASSWORD}}"
