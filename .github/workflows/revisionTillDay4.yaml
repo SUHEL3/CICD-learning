@@ -1,0 +1,28 @@
+name: Revision till day 4
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: create student file
+        run: echo "suhel mujawar" >> student.txt
+      - name: upload file as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: Artifact-uploaded
+          path: student.txt
+
+  display:
+    runs-on: ubuntu-latest
+    steps: 
+      - name: download file from artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: Artifact-uploaded
+      - name: display data
+        run: cat student.txt
+
+
+
